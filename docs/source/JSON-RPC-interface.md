@@ -1,9 +1,11 @@
-## RPC接口列表
+## RPC interface
 
 RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字段指定RPC接口名称。
 
 ## account_create
+  
   生成账户。enable_control 需要设置true。
+
 ### 请求参数
 - action：account_create。
 - password：生成账户的密码。
@@ -31,7 +33,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Password can not be empty"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)    
+    
 ## account_remove
    删除账户。enable_control 需要设置true。
 ### 请求参数
@@ -61,7 +63,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Wrong password"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)    
+    
 ## account_unlock
    解锁账户。enable_control 需要设置true。
 ### 请求参数
@@ -91,7 +93,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Wrong password"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)    
+    
 ## account_lock
    锁定账户。enable_control 需要设置true。
 ### 请求参数
@@ -119,7 +121,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Account not found"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)    
+    
 ## account_import
    导入账户。enable_control 需要设置true。
 ### 请求参数
@@ -149,7 +151,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Invalid json"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)    
+    
 ## account_export
    导出账户。
 ### 请求参数
@@ -179,7 +181,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Account not found"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)    
+    
 ## account_validate
    验证账户格式是否合法。
 ### 请求参数
@@ -209,7 +211,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "valid": 1
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)    
+    
 ## account_password_change
    修改密码。enable_control 需要设置true。
 ### 请求参数
@@ -241,7 +243,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Wrong old password"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)    
+    
 ## account_list
    获取当前节点的所有账户。enable_control 需要设置true。
 ### 请求参数
@@ -265,7 +267,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     ]
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)   
+   
 ## account_block_list
    获取指定账户交易详情。enable_control 需要设置true。
 ### 请求参数
@@ -300,7 +302,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Index not found"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)   
+   
 ## account_balance
    获取指定账户余额。
 ### 请求参数
@@ -330,7 +332,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Invalid account"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表) 
+ 
 ## accounts_balances
    获取指定多个账户余额。
 ### 请求参数
@@ -366,7 +368,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Invalid account"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)
+
 ## account_code
    获取合约账户的代码。
 ### 请求参数
@@ -396,7 +398,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Invalid account"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)
+
 ## call
   获取合约状态。
 ### 请求参数
@@ -432,7 +434,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Invalid to account"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)
+
 ## estimate_gas
   预估交易需消耗的gas数量。
 ### 请求参数
@@ -474,7 +476,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Gas not enough or excute fail"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)
+
 ## send_block
   发送交易。enable_control 需要设置true。
 ### 请求参数
@@ -517,7 +519,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Wrong password"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)     
+     
 ## generate_offline_block
   生成未签名的交易，返回交易详情。enable_control 需要设置true。
 ### 请求参数
@@ -572,7 +574,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Invalid gas format"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)
+
 ## send_offline_block
   发送已签名交易，请求参数来自接口[generate_offline_block](#generate_offline_block),返回交易哈希。enable_control 需要设置true。
 ### 请求参数
@@ -616,7 +618,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Invalid from account"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)    
+    
 ## sign_msg
   签名消息。
 ### 请求参数
@@ -650,7 +652,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Wrong password"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)
+
 ## block
   获取交易详情。
 ### 请求参数
@@ -750,7 +752,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Invalid hash format"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)
+
 ## blocks
   批量获取交易详情。
 ### 请求参数
@@ -783,7 +785,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Invalid hash format"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)
+
 ## block_state
   获取交易状态详情。
 ### 请求参数
@@ -896,7 +898,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Invalid hash format"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)
+
 ## block_states
   批量获取交易状态。
 ### 请求参数
@@ -929,7 +931,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Invalid hash format"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)
+
 ## block_traces
   获取智能合约内部交易trace列表。
 ### 请求参数
@@ -1006,7 +1008,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Invalid hash format"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)
+
 ## stable_blocks
   获取已稳定的指定mci下的多笔交易。
 ### 请求参数
@@ -1040,7 +1042,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "Invalid hash format"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)
+
 ## status
   获取当前节点的最大稳定主链index，最大主链index。
 ### 请求参数
@@ -1068,7 +1070,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "last_stable_block_index": 48367
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)
+
 ## witness_list
   获取见证人列表。
 ### 请求参数
@@ -1105,7 +1107,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     ]
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)
+
 ## version
   获取当前节点后台程序版本号，rpc版本号，数据库版本号。
 ### 请求参数
@@ -1128,7 +1130,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "store_version": "4"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)
+
 ## stop
   停止程序。
 ### 请求参数
@@ -1148,4 +1150,3 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "OK"
 }
 ```
-- [返回RPC接口列表](#RPC接口列表)
