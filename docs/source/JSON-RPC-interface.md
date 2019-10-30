@@ -1,4 +1,4 @@
-## RPC interface
+# RPC interface
 
 RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字段指定RPC接口名称。
 
