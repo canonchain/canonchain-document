@@ -4,7 +4,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
 
 ## account_create
 
-  生成账户。enable_control 需要设置true。
+  生成账户。rpc_control 需要设置true。
 
 ### 请求参数
 - action：account_create。
@@ -35,7 +35,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
 ```
    
 ## account_remove
-   删除账户。enable_control 需要设置true。
+   删除账户。rpc_control 需要设置true。
 ### 请求参数
 - action：account_remove。
 - account：删除的账户。
@@ -65,7 +65,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
 ```
    
 ## account_unlock
-   解锁账户。enable_control 需要设置true。
+   解锁账户。rpc_control 需要设置true。
 ### 请求参数
 - action：account_unlock。
 - account：解锁的账户。
@@ -95,7 +95,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
 ```
    
 ## account_lock
-   锁定账户。enable_control 需要设置true。
+   锁定账户。rpc_control 需要设置true。
 ### 请求参数
 - action：account_lock。
 - account：锁定的账户。
@@ -123,7 +123,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
 ```
    
 ## account_import
-   导入账户。enable_control 需要设置true。
+   导入账户。rpc_control 需要设置true。
 ### 请求参数
 - action：account_import。
 - json：导入账户的json。
@@ -213,7 +213,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
 ```
    
 ## account_password_change
-   修改密码。enable_control 需要设置true。
+   修改密码。rpc_control 需要设置true。
 ### 请求参数
 - action：account_password_change。
 - account：修改密码的账户。
@@ -245,7 +245,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
 ```
    
 ## account_list
-   获取当前节点的所有账户。enable_control 需要设置true。
+   获取当前节点的所有账户。rpc_control 需要设置true。
 ### 请求参数
 - action：account_list。
 ```js
@@ -269,7 +269,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
 ```
   
 ## account_block_list
-   获取指定账户交易详情。enable_control 需要设置true。
+   获取指定账户交易详情。rpc_control 需要设置true。
 ### 请求参数
 - action：account_block_list。
 - account：指定查询账户。
@@ -570,7 +570,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
 ```
     
 ## generate_offline_block
-  生成未签名的交易，返回交易详情。enable_control 需要设置true。
+  生成未签名的交易，返回交易详情。rpc_control 需要设置true。
 ### 请求参数
 - action：generate_offline_block。
 - previous：（可选）源账户的上一笔交易hash。可用于替换无法被打包的交易。
@@ -625,7 +625,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
 ```
 
 ## send_offline_block
-  发送已签名交易，请求参数来自接口[generate_offline_block](#generate_offline_block),返回交易哈希。enable_control 需要设置true。
+  发送已签名交易，请求参数来自接口[generate_offline_block](#generate_offline_block),返回交易哈希。rpc_control 需要设置true。
 ### 请求参数
 - action：send_offline_block。
 - previous：源账户的上一笔交易hash。
@@ -1093,7 +1093,7 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
 ```
 
 ## status
-  获取当前节点的最大稳定主链index，最大主链index。
+  获取当前状态。
 ### 请求参数
 - action：status。  
 ```js
