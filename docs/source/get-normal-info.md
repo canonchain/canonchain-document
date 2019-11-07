@@ -59,4 +59,4 @@ your_path/canonchain --daemon --rpc --rpc_control --data_path=/Users/your_name/y
 ## 智能合约的内部交易解析
 ---
 
-智能合约的内部交易信息可以通过 [block_traces](https://canonchain.readthedocs.io/en/latest/source/JSON-RPC-%E6%8E%A5%E5%8F%A3.html#block-traces) 来获取，具体解析说明，请参照接口说明。
+智能合约的内部交易转账可以通过 [block_traces](https://canonchain.readthedocs.io/en/latest/source/JSON-RPC-%E6%8E%A5%E5%8F%A3.html#block-traces) 来获取，具体解析说明，请参照接口说明。
