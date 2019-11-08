@@ -8,7 +8,6 @@ Canonchain 文档
 
 .. toctree::
    :maxdepth: 2
-   :caption: 用户文档
    :glob:
 
    source/标准链介绍
