@@ -12,16 +12,9 @@ Canonchain 文档
    :glob:
 
    source/标准链介绍
-   source/get-normal-info
-
-.. toctree::
-   :maxdepth: 2
-   :caption: 开发文档
-   :glob:
-
    source/Canonchain-命令行参数
    source/JSON-RPC-接口
-
+   source/get-normal-info
 
 索引和搜索
 ==================
