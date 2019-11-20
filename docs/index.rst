@@ -14,6 +14,7 @@ Canonchain 文档
    source/Canonchain-命令行参数
    source/JSON-RPC-接口
    source/get-normal-info
+   source/parse-log
 
 索引和搜索
 ==================
