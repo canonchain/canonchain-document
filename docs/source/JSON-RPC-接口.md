@@ -503,14 +503,14 @@ RPC请求使用HTTP POST方法，请求内容使用JSON格式，其中action字�
     "msg": "OK",
     "logs": [
         {
-            "address": "czr_3DG8FjYSAqkBNubcSVAAjAtSQ9Q2tWVNwPS8VHQ55XwWG4DsTS",
+            "account": "czr_3DG8FjYSAqkBNubcSVAAjAtSQ9Q2tWVNwPS8VHQ55XwWG4DsTS",
             "data": "0000000000000000000000000000000000000000000000000000000000000000",
             "topics": [
                 "260823607ceaa047acab9fe3a73ef2c00e2c41cb01186adc4252406a47d73446"
             ]
         },
         {
-            "address": "czr_3DG8FjYSAqkBNubcSVAAjAtSQ9Q2tWVNwPS8VHQ55XwWG4DsTS",
+            "account": "czr_3DG8FjYSAqkBNubcSVAAjAtSQ9Q2tWVNwPS8VHQ55XwWG4DsTS",
             "data": "0000000000000000000000000000000000000000000000000000000000000001",
             "topics": [
                 "260823607ceaa047acab9fe3a73ef2c00e2c41cb01186adc4252406a47d73446"
