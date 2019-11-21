@@ -1,4 +1,4 @@
-# 合约的Logs解析
+# 合约的Event解析
 
 `Events` 和 `Logs` 属于一个概念，可以理解为：通过 Logs 实现 Events（事件） 功能，智能合约代码通过 Logs 将日志写入区块链中。
 
