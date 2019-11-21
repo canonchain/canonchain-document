@@ -52,7 +52,7 @@
       --vmodule                    模块日志级别:  p2p=info,node=debug 逗号分隔符 (所有模块列表:node,p2p,rpc,db,sync)  
            
     P2P OPTIONS:
-      --host                       P2P监听地址 (默认: 127.0.0.1)
+      --addr                       P2P监听地址 (默认: 127.0.0.1)
       --port                       P2P监听端口 (默认: 30606) 
       --max_peers                  最大Peer数 (默认: 25)  
       --bootstrap_nodes            引导节点 
@@ -61,12 +61,12 @@
 
     WITNESS OPTIONS:               
       --witness                    开启见证人模式       
-      --witness_account            见证人账户或者账户文件//账户:czr_3MnXfV9hbmxVPdgfrPqgUiH6N7VbkSEhn5VqBCzBcxzTzkEUxU 或账户文件:F:/czr_latest/test/czr_3MnXfV9hbmxVPdgfrPqgUiH6N7VbkSEhn5VqBCzBcxzTzkEUxU.json
+      --witness_account            见证人账户地址或者账户json文件
       --password                   见证人账户密码  
-      --last_block                 用于防止双花，设置当前见证人的最后一笔见证交易的hash, 节点在获得此block后才开始见证
+      --last_block                 设置当前见证人的最后一笔见证交易的hash, 节点在获得此block后才开始见证
 
     MISC OPTIONS:               
-      --config                     指定配置文件，配置文件必须存在       
+      --config                     指定配置文件
 ```
 ### 配置文件  
 config.json - 位于节点数据目录下，示例如下：
