@@ -10,9 +10,9 @@ Canonchain 文档
    :maxdepth: 2
    :glob:
 
-   source/标准链介绍
-   source/Canonchain-命令行参数
-   source/JSON-RPC-接口
+   source/Introduction.md
+   source/Command-Line-Interfaces.md
+   source/JSON-RPC-Interfaces.md
    source/get-normal-info
    source/parse-log
 
