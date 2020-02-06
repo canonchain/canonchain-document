@@ -35,18 +35,18 @@ your_path/canonchain --daemon --rpc --rpc_control --data_path=/Users/your_name/y
 - `--rpc_control`：开启 **HTTP-RPC** 非只读权限
 - `--data_path`：节点数据的存放目录
 
-更多参数，请参考 [命令行参数文档](https://canonchain.readthedocs.io/zh/latest/source/Canonchain-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0.html)
+更多参数，请参考 [命令行参数文档](https://canonchain.readthedocs.io/zh/latest/source/Command-Line-Interfaces.html)
 
 ## 交易获取和解析说明
 ---
 
-- **第一步**：通过 RPC接口 [stable_blocks](https://canonchain.readthedocs.io/zh/latest/source/JSON-RPC-%E6%8E%A5%E5%8F%A3.html#stable-blocks) 批量获取已稳定的**交易(block)**。
+- **第一步**：通过 RPC接口 [stable_blocks](https://canonchain.readthedocs.io/zh/latest/source/JSON-RPC-Interfaces.html#stable-blocks) 批量获取已稳定的**交易(block)**。
 - **第二步**：遍历第一步结果中的 `blocks`数组，判断交易的`type`值是否等于`2`。
     - 如果等于2
         - `from` 和 `content.to` 表示交易的源账户和目标账号，可以通过账号来过滤需要的交易。
         - `content.amount` 表示交易金额 (单位：10<sup>-18</sup>CZR)。
     - 如果不等于2，继续处理下一笔交易。
-- **第三步**：用第二步拿到的Hash，通过RPC接口 [block_states](https://canonchain.readthedocs.io/zh/latest/source/JSON-RPC-%E6%8E%A5%E5%8F%A3.html#block-states) 获取 **交易状态(block_state)**
+- **第三步**：用第二步拿到的Hash，通过RPC接口 [block_states](https://canonchain.readthedocs.io/zh/latest/source/JSON-RPC-Interfaces.html#block-states) 获取 **交易状态(block_state)**
     1. 判断返回结果中的 `is_stable` 属性值是否等于`1`（交易稳定的冗余检查，如果不等于1，终止流程，请向我们上报BUG，非常感谢）。
     2. 判断返回结果中的 `stable_content.status` 属性值是否等于`0`
         - 如果等于0，表示交易成功，根据需求，解析记录需要的交易。
@@ -59,4 +59,4 @@ your_path/canonchain --daemon --rpc --rpc_control --data_path=/Users/your_name/y
 ## 智能合约的内部交易解析
 ---
 
-智能合约的内部交易转账可以通过 [block_traces](https://canonchain.readthedocs.io/zh/latest/source/JSON-RPC-%E6%8E%A5%E5%8F%A3.html#block-traces) 来获取，具体解析说明，请参照接口说明。
+智能合约的内部交易转账可以通过 [block_traces](https://canonchain.readthedocs.io/zh/latest/source/JSON-RPC-Interfaces.html#block-traces) 来获取，具体解析说明，请参照接口说明。
