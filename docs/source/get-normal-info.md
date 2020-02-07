@@ -35,6 +35,11 @@ your_path/canonchain --daemon --rpc --rpc_control --data_path=/Users/your_name/y
 - `--rpc_control`：开启 **HTTP-RPC** 非只读权限
 - `--data_path`：节点数据的存放目录
 
+默认开启的rpc地址是：
+
+- host: `127.0.0.1`
+- port: `8765`
+
 更多参数，请参考 [命令行参数文档](https://canonchain.readthedocs.io/zh/latest/source/Command-Line-Interfaces.html)
 
 ## 交易获取和解析说明
